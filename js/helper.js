@@ -21,13 +21,14 @@ var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
-var HTMLworkPic = '<img src="%data ">'
+var HTMLworkPic = '<img src="%data ">';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img class="project-images" src="%data%">';
+var HTMLprojectBullet = '<li class="bullet">%data%</li>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -37,7 +38,7 @@ var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineClassStart = '<div class="online-entry"></div>'   //Added new Div container for online class elements
+var HTMLonlineClassStart = '<div class="online-entry"></div>';   //Added new Div container for online class elements
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
@@ -88,16 +89,16 @@ function initializeMap() {
   function mylocationFinder() {
     var mylocations = [];
     var subArray = [];
-    subArray.push(bio.contacts.location, 'White House','2005-present') //So pin location for "home" in Washington DC comes up with pic of white House
+    subArray.push(bio.contacts.location, 'White House','2005-present'); //So pin location for "home" in Washington DC comes up with pic of white House
     mylocations.push(subArray);
-    subArray = []
+    subArray = [];
     for (var school in education.schools) {
       subArray.push(education.schools[school].location,education.schools[school].name,education.schools[school].dates);
-      mylocations.push(subArray)
-      subArray = []
+      mylocations.push(subArray);
+      subArray = [];
     }
     for (var job in work.jobs) {
-      subArray.push(work.jobs[job].location, work.jobs[job].employer, work.jobs[job].dates)
+      subArray.push(work.jobs[job].location, work.jobs[job].employer, work.jobs[job].dates);
       mylocations.push(subArray);
       subArray = [];
     }

@@ -27,14 +27,21 @@ var work = {
 			"title":"Merchandising Manager",
 			"location":"Chevy Chase, MD",
 			"dates":"Feb 2008-Oct 2009",
-			"description": "Provided client research support through database creation and aggregating scientific, industry and regulatory information."
+			"description": "Generated a year over year sales margin increase despite economic climate, 13% greater than average store performance.  Analyzed inventory levels, gross margin, product, division and overall sales in-store and globally to identify opportunity. Executed solutions through product placement, product marketing, visual displays and sales team management.  Hired, trained, coached and developed 50 person team comprised of assistant supervisors, sales, stock and visual associates."
 		},
 		{
 			"employer":"Becker & Associates Consulting Inc",
 			"title":"Research Associate",
 			"location":"M St. Washington, DC",
 			"dates":"Oct 2006-Feb 2007",
-			"description": "Provided client research support through database creation and aggregating scientific, industry and regulatory information."
+			"description": "Provided client research support through database creation and aggregating scientific, industry and regulatory information.Prepared briefs for both senior staff and clients of pertinent scientific data and regulatory history."
+		},
+		{
+			"employer":"The Columbia Bank",
+			"title":"Account Manager",
+			"location":"Columbia, MD",
+			"dates":"2003, Dec 2005-Aug 2006",
+			"description": " Developed and maintained relationships with commercial clients with average daily deposits of $1 million. Evaluated retail loan applications of up to $250,000 for credit worthiness and closed loans."
 		},
 		{
 			"employer":"Wells Fargo",
@@ -49,22 +56,60 @@ var work = {
 var projects = {
 	"project": [
 		{
+			"title":"HEALTH TRACKER SINGLE-PAGE APPLICATION",
+			"dates":"Jan 2015",
+			"description": "Online Portfolio using HTML & CSS",
+			"images":["images/Washington-800-1x.jpg"],
+			"bullets":[
+				"Used Backbone.js to develop a single-page responsive app to track user’s caloric intake and related metrics both daily and over time.",
+				"Integrated food data through user-initiated AJAX calls to nutritionix autocomplete API and nutrionix search API. ",
+				"Provided dynamically generated food images through flickr API.",
+				"Persisted data through BackboneFire, Backbone’s binding for  Firebase.",
+				"Graphically presented caloric intake over time and daily percent of caloric consumption to goal as a donut chart using d3.js.",
+				"Used npm to manage dependencies and incorporate build tools through gulp to deliver production quality, minified code."
+			]
+		},
+		{
 			"title":"Online Portfolio",
 			"dates":"July 2015",
 			"description": "Online Portfolio using HTML & CSS",
-			"images":["images/Washington-800-1x.jpg"]
+			"images":["images/Washington-800-1x.jpg"],
+			"bullets":[]
+		},
+		{
+			"title":"Online Portfolio",
+			"dates":"July 2015",
+			"description": "Online Portfolio using HTML & CSS",
+			"images":["images/Washington-800-1x.jpg"],
+			"bullets":[]
+		},
+		{
+			"title":"Online Portfolio",
+			"dates":"July 2015",
+			"description": "Online Portfolio using HTML & CSS",
+			"images":["images/Washington-800-1x.jpg"],
+			"bullets":[]
+		},
+		{
+			"title":"Online Portfolio",
+			"dates":"July 2015",
+			"description": "Online Portfolio using HTML & CSS",
+			"images":["images/Washington-800-1x.jpg"],
+			"bullets":[]
 		},
 		{
 			"title":"Python Turtles",
 			"dates":"June 2015",
 			"description":"Using Python classes to create a visualization",
-			"images":["images/turtles.jpg"]
+			"images":["images/turtles.jpg"],
+			"bullets":[]
 		},
 		{
 			"title":"Movie Website",
 			"dates":"June 2015",
 			"description":"Using Python classes to create a movie website showcasing my favorite movies",
-			"images":["images/movies.jpg"]
+			"images":["images/movies.jpg"],
+			"bullets":[]
 		}
 	]
 };
@@ -128,16 +173,16 @@ bio.display = function() {
 	$(".bio-page").prepend(formattedPicture,formattedWelcome);
 
 	$(".topContacts").append(formattedMobile,formattedEmail,formattedGithub);
-	$("#footerContacts").append(formattedEmail,formattedMobile,formattedTwitter)
+	$("#footerContacts").append(formattedEmail,formattedMobile,formattedTwitter);
 
 	if (bio.skills.length > 0) {
 		$(".topContacts").after(HTMLskillsStart);
 	}
 	for (var skill in bio.skills) {
-		var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill])
-		$("#skills").prepend(formattedSkill)
+		var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
+		$("#skills").prepend(formattedSkill);
 	}
-}
+};
 
 work.display = function() {
 	for (var job in work.jobs) {
@@ -149,7 +194,7 @@ work.display = function() {
 		var formattedworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 		$(".work-entry:last").append(formattedEmployer+formattedTitle+formattedDate+formattedLocation+formattedworkDescription);
 	}
-}
+};
 
 projects.display = function() {
 	for (var project in projects.project) {
@@ -157,14 +202,20 @@ projects.display = function() {
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.project[project].title);
 		var formattedDate = HTMLprojectDates.replace("%data%", projects.project[project].dates);
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.project[project].description);
-		var formattedImages = ""
-		for (image in projects.project[project].images) {
+		var formattedImages = "";
+		for (var image in projects.project[project].images) {
 			var formattedImage = HTMLprojectImage.replace("%data%", projects.project[project].images[image]);
 			formattedImages = formattedImages + formattedImage;
 		}
-		$(".project-entry:last").append(formattedTitle,formattedDate,formattedDescription,formattedImages);
+		var formattedBullets = '<ul class="bullets">';
+		for (var bullet in projects.project[project].bullets) {
+			var formattedBullet = HTMLprojectBullet.replace("%data%", projects.project[project].bullets[bullet]);
+			formattedBullets = formattedBullets + formattedBullet;
+		}
+		formattedBullets = formattedBullets + '</ul>';
+		$(".project-entry:last").append(formattedTitle,formattedDate,formattedDescription,formattedImages,formattedBullets);
 	}
-}
+};
 
 education.display = function() {
 	for (var school in education.schools) {
