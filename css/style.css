@@ -138,4 +138,8 @@ img {
   margin: 0 5%;
 }
 
+.bullets {
+  list-style-type: disc;
+  color: #f2f2f2;
+}
 

@@ -57,8 +57,8 @@ var projects = {
 	"project": [
 		{
 			"title":"HEALTH TRACKER SINGLE-PAGE APPLICATION",
-			"dates":"Jan 2015",
-			"description": "Online Portfolio using HTML & CSS",
+			"dates":"Jan 2016",
+			"description": "A nutrition tracker single page web app",
 			"images":["images/Washington-800-1x.jpg"],
 			"bullets":[
 				"Used Backbone.js to develop a single-page responsive app to track user’s caloric intake and related metrics both daily and over time.",
@@ -70,39 +70,68 @@ var projects = {
 			]
 		},
 		{
-			"title":"Online Portfolio",
-			"dates":"July 2015",
-			"description": "Online Portfolio using HTML & CSS",
+			"title":"FEED READER TESTING",
+			"dates":"February 2016",
+			"description": "Using Jasmine Testing Suite",
 			"images":["images/Washington-800-1x.jpg"],
-			"bullets":[]
+			"bullets":[
+				"Tested functionality of  features and AJAX calls of a given web-based application using Jasmine and mock AJAX requests.",
+				"Included additional testing suites for future test-driven development."
+				]
 		},
 		{
-			"title":"Online Portfolio",
-			"dates":"July 2015",
-			"description": "Online Portfolio using HTML & CSS",
+			"title":"NEIGHBORHOOD MAP PROJECT",
+			"dates":"December 2015",
+			"description": "a single-page application built with Knockout.js framework, responsively rendered for all screen sizes.",
 			"images":["images/Washington-800-1x.jpg"],
-			"bullets":[]
+			"bullets":[
+				"Developed a map of  points of interest in Charlottesville, VA by combining data from AJAX requests to foursquare and wikipedia API’s with data from  googlemaps API.",
+		       	"Persisted place data by saving to and retrieving data from localStorage.",
+		        "Created filter feature with jquery autocomplete widget and radio buttons dynamically generated from place data.",
+		        "Used npm to manage dependencies and incorporate build tools through gulp to deliver production "
+			]
 		},
 		{
-			"title":"Online Portfolio",
-			"dates":"July 2015",
+			"title":"WEBSITE OPTIMIZATION PROJECT",
+			"dates":"November 2015",
 			"description": "Online Portfolio using HTML & CSS",
 			"images":["images/Washington-800-1x.jpg"],
-			"bullets":[]
+			"bullets":[
+				"Optimized the critical rendering path of an existing website to achieve PageSpeed Insights score of 99.",
+		     	"Eliminated inefficiencies in the website's scroll animation.  Site scrolls at 60 frames per second."
+			]
 		},
 		{
-			"title":"Online Portfolio",
-			"dates":"July 2015",
-			"description": "Online Portfolio using HTML & CSS",
+			"title":"HTML5 CANVAS GAME",
+			"dates":"October 2015",
+			"description": "A side-scrolling shooter game written in JavaScript",
 			"images":["images/Washington-800-1x.jpg"],
-			"bullets":[]
+			"bullets":[
+				"Coded player, enemies, and other game entities in JavaScript's object-oriented pseudo-classical style.",
+				"Used canvas and JS to create special effects such as explosions and used sprite-boards to create cycled animation."
+			]
 		},
 		{
-			"title":"Python Turtles",
-			"dates":"June 2015",
-			"description":"Using Python classes to create a visualization",
+			"title":"INTERACTIVE ONLINE RESUME",
+			"dates":"September 2015",
+			"description":"This online resume",
 			"images":["images/turtles.jpg"],
-			"bullets":[]
+			"bullets":[
+			 	"Used Polymer and Google material design features to create an interactive online resume.",
+	  			"Incorporated a google API map that populates pins with photos based on locations in resume.",
+	      		"Used Bower to incorporate and keep Polymer and other dependencies updated."
+			]
+		},
+		{
+			"title":"ONLINE PORTFOLIO",
+			"dates":"August 2015",
+			"description":"An online portfolio",
+			"images":["images/Washington-800-1x.jpg"],
+			"bullets":[
+				"Based on principles of responsive web design, created an online portfolio suitable for all screen sizes.",
+				"Incorporated Grunt into workflow to deliver strong images without download byte overhead.",
+				"Used the srcset attribute of HTML5 image tags to serve optimized images to users on all device sizes."
+]
 		},
 		{
 			"title":"Movie Website",
