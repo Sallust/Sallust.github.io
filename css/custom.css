@@ -115,14 +115,18 @@ hr {
 
 #workExperience {
 	background: #0d7689;
+	overflow: auto;
 }
 
 #projects {
 	background: #8aae26;
+	overflow: auto;
 }
 
 #education {
 	background: #f5684c;
+	overflow: auto;
+
 }
 
 #mapDiv {
